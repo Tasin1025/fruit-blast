@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83354176c5.js" crossorigin="anonymous"></script>
     <style>
         * {
             font-family: 'Lato', sans-serif;
@@ -18,59 +19,120 @@
 </head>
 
 <body>
-    <header class="px-56">
-        <nav class="flex justify-between">
-            <div class="navbar bg-[#F85559] rounded-full my-6 flex justify-between">
-                <div class="flex ">
-                    <a class="btn btn-ghost normal-case text-lg text-white font-light">Home</a>
-                    <a class="btn btn-ghost normal-case text-lg text-white font-light">About Us</a>
-                    <a class="btn btn-ghost normal-case text-lg text-white font-light">Shop</a>
-                    <a class="btn btn-ghost normal-case text-lg text-white font-light">All Fruits</a>
+    <!--  responsive navbar -->
+    <header class="px-4 lg:px-16 xl:px-52">
+        <nav>
+            <div
+                class="navbar flex justify-between flex-row-reverse md:flex-row bg-white md:bg-[#F85559] rounded-full my-6 md:py-4 ">
 
+                <div class="md:hidden flex-row-reverse">
+                    <button class="btn btn-ghost normal-case text-black">
+                        <span class="icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
                 </div>
 
-                <div>
-                    <a class="btn btn-ghost normal-case text-2xl text-white font-bold">
+                <div class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
+                    <a class="btn btn-ghost text-lg text-white font-medium">Home</a>
+                    <a class="btn btn-ghost text-lg text-white font-medium">About Us</a>
+                    <a class="btn btn-ghost text-lg text-white font-medium">Shop</a>
+                    <a class="btn btn-ghost text-lg text-white font-medium">All Fruits</a>
+                </div>
+
+                <div class="flex justify-between flex-row-reverse">
+
+                    <a class="btn btn-ghost normal-case text-2xl text-black md:text-white font-bold">
                         <img src="./images/logo.png" alt="Logo" class="inline-block h-8 mr-2" /> Fruit Burst
                     </a>
                 </div>
 
-                <div class="form-control ">
-                    <input type="text" placeholder="Search here" class="input input-bordered  md:w-auto rounded-3xl" />
+                <div class="hidden md:inline form-control ">
+                    <input type="text" placeholder="&#xF002; Search here"
+                        class="input input-bordered md:w-auto rounded-3xl" style="font-family: lato,fontAwesome;" />
                 </div>
-
-
             </div>
         </nav>
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-            </div>
-            <div class="flex-none gap-2">
-                <div class="form-control">
-                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                </div>
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
-                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                    </label>
-                    <ul tabindex="0"
-                        class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li>
-                            <a class="justify-between">
-                                Profile
-                                <span class="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </header>
+    <main>
+        <!--  carousel  -->
+        <section class="px-4 lg:px-16 xl:px-52">
+            <div class="carousel w-full ">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./images/banner1.png" class="w-full md:brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./images/banner2.png" class="w-full md:brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./images/banner3.png" class="w-full md:brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="./images/banner4.png" class="w-full md:brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- carousel text -->
+
+            <div class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-black md:text-white text-center">
+                <p class="text-xl md:text-5xl font-bold">Exotic tastes at your<br>doorstep</p>
+                <h4 class="mt-4">We supply highly quality organic products</h4>
+                <a href="#" class="btn btn-pink bg-[#F85559] border-0 mt-4">Shop Now</a>
+            </div>
+        </section>
+        <!-- dod timer  -->
+        <section class="px-4 lg:px-16 xl:px-52 flex justify-between p-5 flex-col md:flex-row">
+            <div>
+                <h4 class="text-left font-lato font-extrabold text-xl md:text-5xl pb-3">Deal of the day</h4>
+                <p class="text-base font-light">Contrary to popular belief, is not simply random text. It has roots in a
+                    piece of classical<br> Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="flex flex-col">
+                    <span class="countdown font-mono text-2xl md:text-5xl">
+                        <span style="--value:15;"></span>:
+                    </span>
+                    days
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-mono text-2xl md:text-5xl">
+                        <span style="--value:10;"></span>:
+                    </span>
+                    hours
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-mono text-2xl md:text-5xl">
+                        <span style="--value:24;"></span>:
+                    </span>
+                    min
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-mono text-2xl md:text-5xl">
+                        <span style="--value:27;"></span>
+                    </span>
+                    sec
+                </div>
+            </div>
+        </section>
+        <!-- fruit cards -->
+        
+    </main>
 
 </body>
 
