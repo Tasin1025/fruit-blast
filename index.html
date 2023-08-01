@@ -7,10 +7,71 @@
     <title>Fruit Blast</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text text3xl"> new assignment</h1>
+    <header class="px-56">
+        <nav class="flex justify-between">
+            <div class="navbar bg-[#F85559] rounded-full my-6 flex justify-between">
+                <div class="flex ">
+                    <a class="btn btn-ghost normal-case text-lg text-white font-light">Home</a>
+                    <a class="btn btn-ghost normal-case text-lg text-white font-light">About Us</a>
+                    <a class="btn btn-ghost normal-case text-lg text-white font-light">Shop</a>
+                    <a class="btn btn-ghost normal-case text-lg text-white font-light">All Fruits</a>
+
+                </div>
+
+                <div>
+                    <a class="btn btn-ghost normal-case text-2xl text-white font-bold">
+                        <img src="./images/logo.png" alt="Logo" class="inline-block h-8 mr-2" /> Fruit Burst
+                    </a>
+                </div>
+
+                <div class="form-control ">
+                    <input type="text" placeholder="Search here" class="input input-bordered  md:w-auto rounded-3xl" />
+                </div>
+
+
+            </div>
+        </nav>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
 </body>
 
 </html>
